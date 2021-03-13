@@ -1,0 +1,28 @@
+{
+  "type": "object",
+  "required": [
+    "_id",
+    "name",
+    "email",
+    "password",
+    "__v"
+  ],
+  "properties": {
+    "_id": {
+      "type": "string"
+    },
+    "name": {
+      "type": "string"
+    },
+    "email": {
+      "type": "string"
+    },
+    "password": {
+      "type": "string"
+    },
+    "__v": {
+      "type": "number"
+    }
+  }
+
+}

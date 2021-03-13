@@ -17,3 +17,15 @@ Define and implement the tests of the types and levels you consider useful/neces
 All the written/implemented tests and validations should be portable (i.e. automatically executable on a local machine, a server, a CI/CD platform, etc.).
 
 If you wish to, you can suggest or even implement small refactors/tweaks to make the source code more testable. The same is valid for all the bugs you may find.
+
+# QA
+I used Docker to start the application and the tests.
+The tests were developed using Robot Framework and using requests library based on Python and selenium library.
+
+## Run
+- docker build -t gyant-challenge-app .
+- docker run -p 3000:3000 -d gyant-challenge-app
+- docker build -t gyant-challenge-tests ./automation
+- docker run -ti -v <PATH>/automation:/app gyant-challenge-tests bash
+- cd app
+- robot -d Results -i TEST Tests

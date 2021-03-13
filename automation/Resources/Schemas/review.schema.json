@@ -1,0 +1,52 @@
+{
+  "type": "object",
+  "required": [
+    "_id",
+    "id",
+    "description",
+    "__v",
+    "reviews"
+  ],
+  "properties": {
+    "_id": {
+      "type": "string"
+    },
+    "id": {
+      "type": "string"
+    },
+    "description": {
+      "type": "string"
+    },
+    "__v": {
+      "type": "number"
+    },
+    "reviews": {
+      "type": "array",
+      "minItems": 1,
+      "uniqueItems": true,
+      "items": {
+        "type": "object",
+        "required": [
+          "_id",
+          "userId",
+          "conditionId",
+          "date"
+        ],
+        "properties": {
+          "_id": {
+            "type": "string"
+          },
+          "userId": {
+            "type": "string"
+          },
+          "conditionId": {
+            "type": "string"
+          },
+          "date": {
+            "type": "string"
+          }
+        }
+      }
+    }
+  }
+}

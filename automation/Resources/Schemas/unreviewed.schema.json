@@ -1,0 +1,29 @@
+{
+  "type": "array",
+  "minItems": 1,
+  "uniqueItems": true,
+  "items": {
+    "type": "object",
+    "required": [
+      "_id",
+      "id",
+      "description",
+      "reviews"
+    ],
+    "properties": {
+      "_id": {
+        "type": "string"
+      },
+      "id": {
+        "type": "string"
+      },
+      "description": {
+        "type": "string"
+      },
+      "reviews": {
+        "type": "array",
+        "maxItems": 0
+      }
+    }
+  }
+}
