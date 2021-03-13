@@ -7,7 +7,7 @@ Library  MongoDBLibrary
 Library  SeleniumLibrary
 
 *** Variables ***
-${BASE_URL}  http://localhost:3000
+${BASE_URL}  http://gyant-challenge-app:3000
 ${SUCCESS_RESPONSE}  200
 ${DB_CONNECTION}  mongodb+srv://gyant_user:qwerty1234@cluster0.npiuo.mongodb.net/gyantQaChallenge?retryWrites=true&w=majority
 ${DB_NAME}  gyantQaChallenge

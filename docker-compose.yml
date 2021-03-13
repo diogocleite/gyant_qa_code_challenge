@@ -1,0 +1,16 @@
+services:
+  gyant-challenge-app:
+    build: .
+    ports:
+      - "3000:3000"
+    networks:
+      - backend
+  gyant-challenge-tests:
+    build: ./automation
+    volumes:
+      - ./automation:/app
+    networks:
+      - backend
+networks:
+  backend:
+    driver: "bridge"

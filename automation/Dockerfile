@@ -9,7 +9,12 @@ RUN python3 -m pip install robotframework-requests==0.8.1
 RUN python3 -m pip install robotframework-jsonschemalibrary==1.0
 RUN python3 -m pip install robotframework-seleniumlibrary==5.1.0
 RUN python3 -m pip install webdrivermanager==0.10.0
+RUN python3 -m pip install bson==0.5.9
+RUN python3 -m pip install pymongo==3.11.0
 RUN python3 -m pip install robotframework-mongodb-library3
-RUN python3 -m pip install pymongo
 RUN python3 -m pip install dnspython
 RUN webdrivermanager chrome
+
+CMD cd app
+CMD ls
+CMD robot -d Results -i TEST Tests
