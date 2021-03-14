@@ -23,9 +23,5 @@ I used Docker to start the application and the tests.
 The tests were developed using Robot Framework and using requests library based on Python and selenium library.
 
 ## Run
-- docker build -t gyant-challenge-app-img .
-- docker run --name gyant-challenge-app -p 3000:3000 gyant-challenge-app-img
-- docker build -t gyant-challenge-tests-img ./automation
-- docker run --name gyant-challenge-tests -ti -v <PATH>/automation:/app gyant-challenge-tests-img bash
-- cd app
-- robot -d Results -i TEST Tests
+- docker-compose up
+    - It goes up two containers one for the app and other for the tests. After finish the results are in command line and inside the folder automation/Results

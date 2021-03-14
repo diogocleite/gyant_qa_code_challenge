@@ -45,7 +45,6 @@ Logout
 
 *** Keywords ***
 SetUp
-  Create New Session
-  Create New Session Frontend
   SetUp DB
+  Create New Session Frontend
 

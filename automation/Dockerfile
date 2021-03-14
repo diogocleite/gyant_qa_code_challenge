@@ -15,6 +15,6 @@ RUN python3 -m pip install robotframework-mongodb-library3
 RUN python3 -m pip install dnspython
 RUN webdrivermanager chrome
 
-CMD cd app
-CMD ls
-CMD robot -d Results -i TEST Tests
+WORKDIR /app
+
+CMD sleep 5; robot -d Results -i TEST Tests

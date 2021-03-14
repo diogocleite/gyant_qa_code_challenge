@@ -15,6 +15,7 @@ ${DYNAMIC_VARIABLE}  {userId}
 *** Test Cases ***
 Review Case
   [Tags]  TEST
+  Import New Conditions
   Import New Cases
   Create New User To Login
   Login New User

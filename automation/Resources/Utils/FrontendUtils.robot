@@ -5,13 +5,16 @@ Resource  ConditionsUtil.robot
 
 *** Keywords ***
 SetUp DB
+  Create Session  User_Profile  ${BASE_URL}
+  Connect To Database Mongo
   Set Relative Path  /users/register
   ${bodyRegister}=  Evaluate  { "name": "Doctor Who", "email": "who@doctor.com", "password": "qwerty" }
   Set Test Variable  ${bodyRegister}
-  Register User  400
+  Register User  any
   Import New Cases
-  Set Relative Path  /conditions/import
-  Import Conditions
+  Import New Conditions
+  Delete All Sessions
+  Disconnect Database Mongo
 
 Login
   Wait Until Element Is Visible  //*[@id="login"]
@@ -25,14 +28,17 @@ Login
 Response to All The Cases
   Wait Until Element Contains  //*[@id="loginInfo"]  Logged in as: Doctor Who
   Wait Until Page Contains  Please review this case:
-  Select From List By Value  //*[@id="conditions"]  604b858d095f565a46b08667
+  Wait Until Element Is Visible  //option[@value="${conditionId}"]
+  Select From List By Value  //*[@id="conditions"]  ${conditionId}
   Wait Until Element Is Enabled  //*[@id="nextCase"]
   Click Button  //*[@id="nextCase"]
   Wait Until Element Is Visible  //*[@id="nextCase" and @disabled="true"]
-  Select From List By Value  //*[@id="conditions"]  604b858d095f565a46b0872e
+  Wait Until Element Is Visible  //option[@value="${conditionId}"]
+  Select From List By Value  //*[@id="conditions"]  ${conditionId}
   Wait Until Element Is Enabled  //*[@id="nextCase"]
   Click Button  //*[@id="nextCase"]
   Wait Until Element Is Visible  //*[@id="nextCase" and @disabled="true"]
-  Select From List By Value  //*[@id="conditions"]  604b858d095f565a46b0871d
+  Wait Until Element Is Visible  //option[@value="${conditionId}"]
+  Select From List By Value  //*[@id="conditions"]  ${conditionId}
   Wait Until Element Is Enabled  //*[@id="nextCase"]
   Click Button  //*[@id="nextCase"]

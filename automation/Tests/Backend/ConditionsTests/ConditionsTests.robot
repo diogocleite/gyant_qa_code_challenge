@@ -11,6 +11,7 @@ ${REGISTER_PATH_CONDITIONS}  /conditions
 *** Test Cases ***
 Get List of Conditions
   [Tags]  TEST
+  Import New Conditions
   Set Relative Path  ${REGISTER_PATH_CONDITIONS}
   Get Conditions List
   Validate Conditions

@@ -42,3 +42,8 @@ Create Invalid Body To Create Condition
   ${newDescriptionCondition}=  Set Variable  TestFail
   ${bodyCondition}=  Evaluate  { "description": "${newDescriptionCondition}" }
   Set Test Variable  ${bodyCondition}
+
+Import New Conditions
+  Set Relative Path  /conditions/import
+  Import Conditions
+  Select One Condition
