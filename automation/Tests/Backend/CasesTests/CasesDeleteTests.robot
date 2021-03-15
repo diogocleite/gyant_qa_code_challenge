@@ -16,6 +16,7 @@ Delete Cases
   Delete Cases
   Validate No Cases Existence
 
+### NEGATIVES ###
 Delete Cases Fail
   [Tags]  TEST
   Import New Cases

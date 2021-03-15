@@ -17,6 +17,7 @@ Register a user with success
   Validate Register Response
   Validate Register On DB
 
+### NEGATIVE ###
 Register a user fail
   [Tags]  TEST
   Set Relative Path  ${REGISTER_PATH}

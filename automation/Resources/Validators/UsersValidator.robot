@@ -34,6 +34,7 @@ Validate Login On DB
   Should Contain X Times  ${mongodbUser}  ${responseBody["email"]}  1
   Should Contain X Times  ${mongodbUser}  ${responseBody["id"]}  1
 
+### NEGATIVES ###
 Validate Register User Fail
   ${responseBody}=  Set Variable  ${responseRegister.json()}
   Should Be Equal As Integers  ${responseBody["statusCode"]}  400

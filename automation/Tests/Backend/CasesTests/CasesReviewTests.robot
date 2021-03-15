@@ -28,6 +28,7 @@ Review Case
   Review One Case
   Validate Review Response
 
+### NEGATIVES ###
 Review Invalid Case
   [Tags]  TEST
   Create Invalid Body To Review Case

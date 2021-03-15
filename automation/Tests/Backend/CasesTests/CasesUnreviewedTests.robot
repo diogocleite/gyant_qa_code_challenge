@@ -21,6 +21,7 @@ Get List of the cases to Review
   Get List of Unreviewed Cases
   Validate List of Unreviewed Cases
 
+### NEGATIVES ###
 Get List of the cases to Review Invalid Id
   [Tags]  TEST
   Set Dynamic Relative Path  ${UNREVIEWED_PATH_CASES}  ${DYNAMIC_VARIABLE}  ${INVALID_ID}

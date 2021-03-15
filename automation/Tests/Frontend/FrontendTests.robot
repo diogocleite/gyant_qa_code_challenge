@@ -9,6 +9,7 @@ Login in Frontend
   [TAGS]  TEST
   Login
   Wait Until Element Contains  //*[@id="loginInfo"]  Logged in as: Doctor Who
+  Capture Page Screenshot
 
 Validate If Cases Are Shown
   [TAGS]  TEST
@@ -25,12 +26,14 @@ Validate If Cases Are Shown
   ${textCase}=  Get Text  //*[@id="case"]
   ${textCaseLength}=  Get Length  ${textCase}
   Should Be True  ${textCaseLength}>100
+  Capture Page Screenshot
 
 Response To All The Cases
   [TAGS]  TEST
   Login
   Response to All The Cases
   Wait Until Page Contains  You are done.
+  Capture Page Screenshot
 
 Logout
   [TAGS]  TEST
@@ -42,6 +45,17 @@ Logout
   Element Should Not Be Visible  //*[@id="logout"]
   Element Should Be Visible  //*[@id="login"]
   Wait Until Page Contains  Please Login to review cases.
+  Capture Page Screenshot
+
+### NEGATIVES ###
+Login With Invalid Credentials
+  [TAGS]  TEST
+  Login  invalid@gmail.com
+  Wait Until Element Contains  //*[@id="swal2-title"]  Invalid Login
+  Element Should Contain  //*[@id="swal2-content"]  User with email: "invalid@gmail.com" not found.
+  Click Button  //button[@class="swal2-confirm swal2-styled"]
+  Element Should Be Visible  //*[@id="login"]
+  Capture Page Screenshot
 
 *** Keywords ***
 SetUp

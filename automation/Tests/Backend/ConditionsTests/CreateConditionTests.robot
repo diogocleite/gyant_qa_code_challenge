@@ -23,6 +23,7 @@ Conditions Import
   Import Conditions
   Validate Conditions Import
 
+### NEGATIVES ###
 Create Invalid Condition
   [Tags]  TEST
   Set Relative Path  ${REGISTER_PATH_CONDITIONS}

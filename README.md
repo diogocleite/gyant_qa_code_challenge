@@ -19,9 +19,5 @@ All the written/implemented tests and validations should be portable (i.e. autom
 If you wish to, you can suggest or even implement small refactors/tweaks to make the source code more testable. The same is valid for all the bugs you may find.
 
 # QA
-I used Docker to start the application and the tests.
-The tests were developed using Robot Framework and using requests library based on Python and selenium library.
 
-## Run
-- docker-compose up
-    - It goes up two containers one for the app and other for the tests. After finish the results are in command line and inside the folder automation/Results
+The tests are inside the folder automation. To run read the: [Automation Readme](https://github.com/diogocleite/gyant_qa_code_challenge/blob/main/automation/README.md)

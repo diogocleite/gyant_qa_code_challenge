@@ -18,6 +18,7 @@ Login with an user success
   Validate User Login
   Validate Login On DB
 
+### NEGATIVES ###
 Login With Invalid User
   [Tags]  TEST
   Set Relative Path  ${REGISTER_PATH}

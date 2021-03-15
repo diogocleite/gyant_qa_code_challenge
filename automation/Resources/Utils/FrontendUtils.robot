@@ -17,11 +17,12 @@ SetUp DB
   Disconnect Database Mongo
 
 Login
+  [ARGUMENTS]  ${emailIn}=who@doctor.com  ${passwordIn}=qwerty
   Wait Until Element Is Visible  //*[@id="login"]
   ${emailInput}=  Set Variable  //*[@id="login"]/input[@placeholder="email"]
-  Input Text  ${emailInput}  who@doctor.com
+  Input Text  ${emailInput}  ${emailIn}
   ${passwordInput}=  Set Variable  //*[@id="login"]/input[@placeholder="password"]
-  Input Text  ${passwordInput}  qwerty
+  Input Text  ${passwordInput}  ${passwordIn}
   ${loginButton}=  Set Variable  //*[@id="login"]/input[@type="submit"]
   Click Button  ${loginButton}
 
